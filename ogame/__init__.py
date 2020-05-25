@@ -90,7 +90,7 @@ class OGame(object):
                     attributes.append(line[result][attribute_tag])
                 elif result == 'attribute':
                     attributes.append(line[result][same_element_attribute])
-                else:
+                elif result is not None and line[result] is not None:
                     val = line[result].replace(' ', '')
                     if val is not '':
                         attributes.append(val)
