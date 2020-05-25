@@ -668,7 +668,7 @@ class OGame(object):
                     player_names.append(name)
                     if self.player != name:
                         player_ids.append(int(html.find_all('id', 'player', 'attribute')
-                                              [player_ids_count].replace('player', '')))
+                                              [0].replace('player', '')))
                         player_ids_count += 1
                     else:
                         player_ids.append(self.player_id)
